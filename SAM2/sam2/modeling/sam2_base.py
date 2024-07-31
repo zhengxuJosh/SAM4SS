@@ -215,7 +215,7 @@ class SAM2Base(torch.nn.Module):
             mask_in_chans=16,
         )
         self.sam_mask_decoder = MaskDecoder(
-            num_multimask_outputs=25,
+            num_multimask_outputs=3, # num_classes of output mask
             transformer=TwoWayTransformer(
                 depth=2,
                 embedding_dim=self.sam_prompt_embed_dim,
