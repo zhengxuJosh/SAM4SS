@@ -11,4 +11,4 @@ class sam4ss(nn.Module):
     def forward(self, batched_input, multimask_output=True):
             image_embedding = self.sam.forward_image(batched_input)
 
-            return self.sam._forward_sam_heads(image_embedding['vision_features'], high_res_features=image_embedding['backbone_fpn'][:2], multimask_output=multimask_output) # , image_size
+            return self.sam._forward_sam_heads(image_embedding['vision_features'], high_res_features=image_embedding['backbone_fpn'][:2], multimask_output=multimask_output) 
