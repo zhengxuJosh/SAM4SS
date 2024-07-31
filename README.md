@@ -1,4 +1,6 @@
-## SAM4SS： Customize **Segment Anything Model ([SAM](https://github.com/facebookresearch/segment-anything))** and **Segment Anything Model 2 ([SAM2](https://github.com/facebookresearch/segment-anything-2))** for **Semantic Segmentation**
+# SAM4SS： 
+
+## Customize **[SAM](https://github.com/facebookresearch/segment-anything)** and **[SAM2](https://github.com/facebookresearch/segment-anything-2)** for **Semantic Segmentation**
 
 ## Installation
 
@@ -16,11 +18,11 @@ pip install -e .
 
 ## Getting Started
 
-# Download Checkpoints
+## Download Checkpoints
 
 Please follow the official steps in [SAM](https://github.com/facebookresearch/segment-anything) and [SAM2](https://github.com/facebookresearch/segment-anything-2) to download the checkpoints.
 
-# Try Demo
+## Try Demo
 
 ```
 python3 ./SAM/demo.py
