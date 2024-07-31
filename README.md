@@ -3,31 +3,41 @@
 ## Installation
 
 ```
-git clone --
-cd --
-conda create --
+git clone https://github.com/zhengxuJosh/SAM4SS.git
+cd SAM4SS
+conda create -n sam python==3.10.0
+pip install -r requirements.txt
 ```
 
-Please install SAM2 on a GPU machine using 
+Install SAM2 and ideally using CUDA 12.x and cuDNN 9.x.x
 
 ```
+cd ./SAM4SS/SAM2
 pip install -e .
 ```
 
+## TODO
+
+- [x] Adopt SAM and SAM2 for multi-class image semantic segmentation predictions
+- [ ] Conduct experiments on mainstream semantic segmentation datasets with full fine-tuning on SAM and SAM2
+- [ ] Conduct experiments on mainstream semantic segmentation datasets with Parameter-Efficient Fine-Tuning (PEFT) using SAM and SAM2
+
+
+
 ## Getting Started
 
-## Download Checkpoints
+### Download Checkpoints
 
 Please follow the official steps in [SAM](https://github.com/facebookresearch/segment-anything) and [SAM2](https://github.com/facebookresearch/segment-anything-2) to download the checkpoints.
 
-## Try Demo
+### Try Demo
 
 ```
 python3 ./SAM/demo.py
 python3 ./SAM2/demo.py
 ```
 
-## Semantic Segmentation with SAM
+#### Image Semantic Segmentation with SAM
 
 Initialize the SAM model by giving input image size `image_size`, number of classes `num_classes` for your semantic segmentation dataset and also load the downloaded weights `checkpoint`.
 
@@ -46,9 +56,9 @@ Forward propagation.
 output = net(batched_input=input, multimask_output=True, image_size=1024)
 ```
 
-## Semantic Segmentation with SAM2
+#### Image Semantic Segmentation with SAM2
 
-Using high resolution features and the image embeddings for generating masks.
+Using high resolution features (different from SAM which only using the image embeddings) and the image embeddings for generating masks.
 
 ```
 import torch.nn as nn
@@ -64,7 +74,7 @@ class sam4ss(nn.Module):
     def forward(self, batched_input, multimask_output=True):
             image_embedding = self.sam.forward_image(batched_input)
 
-            return self.sam._forward_sam_heads(image_embedding['vision_features'], high_res_features=image_embedding['backbone_fpn'][:2], multimask_output=multimask_output) # , image_size
+            return self.sam._forward_sam_heads(image_embedding['vision_features'], high_res_features=image_embedding['backbone_fpn'][:2], multimask_output=multimask_output)
 ```
 
 Initialize the SAM2 model with corresponding config files and also load the pretrained weights.
