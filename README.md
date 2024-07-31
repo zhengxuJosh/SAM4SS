@@ -20,7 +20,7 @@ pip install -e .
 
 - [x] Adopt SAM and SAM2 for multi-class image semantic segmentation predictions
 - [ ] Conduct experiments on mainstream semantic segmentation datasets with full fine-tuning on SAM and SAM2
-- [ ] Conduct experiments on mainstream semantic segmentation datasets with Parameter-Efficient Fine-Tuning (PEFT) using SAM and SAM2
+- [ ] Conduct experiments on mainstream semantic segmentation datasets with Parameter-Efficient Fine-Tuning (PEFT) on SAM and SAM2
 
 
 
