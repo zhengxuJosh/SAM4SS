@@ -6,6 +6,9 @@ from sam2.sam4ss import sam4ss
 checkpoint = "./checkpoints/sam2_hiera_base_plus.pt"
 model_cfg = "./sam2_hiera_b+.yaml"
 sam2 = build_sam2(model_cfg, checkpoint)
+
+# The num_classes of the semantic segmentation dataset can be set by `num_multimask_outputs` of `Mask_decoder`
+
 net = sam4ss(sam2)
 
 input = torch.randn(1,3,1024,1024)
