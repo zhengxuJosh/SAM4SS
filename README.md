@@ -1,4 +1,4 @@
-# SAM4SS: Customize **[SAM](https://github.com/facebookresearch/segment-anything)** and **[SAM2](https://github.com/facebookresearch/segment-anything-2)** for **Semantic Segmentation**
+# SAM4SS: Tailoring **[SAM](https://github.com/facebookresearch/segment-anything)** and **[SAM2](https://github.com/facebookresearch/segment-anything-2)** for Semantic Segmentation
 
 ## Installation
 
@@ -18,9 +18,8 @@ pip install -e .
 
 ## TODO
 
-- [x] Adopt SAM and SAM2 for multi-class image semantic segmentation predictions
-- [ ] Conduct experiments on mainstream semantic segmentation datasets with full fine-tuning on SAM and SAM2
-- [ ] Conduct experiments on mainstream semantic segmentation datasets with Parameter-Efficient Fine-Tuning (PEFT) on SAM and SAM2
+- [x] Adopt SAM and SAM2 for multi-class image semantic segmentation prediction
+- [ ] Adopt SAM and SAM2 for multi-class video semantic segmentation prediction
 
 
 
