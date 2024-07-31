@@ -1,6 +1,4 @@
-# SAM4SS： 
-
-## Customize **[SAM](https://github.com/facebookresearch/segment-anything)** and **[SAM2](https://github.com/facebookresearch/segment-anything-2)** for **Semantic Segmentation**
+# SAM4SS: Customize **[SAM](https://github.com/facebookresearch/segment-anything)** and **[SAM2](https://github.com/facebookresearch/segment-anything-2)** for **Semantic Segmentation**
 
 ## Installation
 
