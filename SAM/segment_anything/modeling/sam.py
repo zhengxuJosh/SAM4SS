@@ -60,8 +60,8 @@ class Sam(nn.Module):
         return outputs
 
     def forward_train(self, batched_input, multimask_output, image_size):
-        input_images = torch.stack([self.preprocess(x.squeeze(0)) for x in batched_input], dim=0)# .squeeze(0)
-        # input_images = self.preprocess(batched_input)
+        
+        input_images = self.preprocess(batched_input)
         image_embeddings = self.image_encoder(input_images)
         sparse_embeddings, dense_embeddings = self.prompt_encoder(
             points=None, boxes=None, masks=None
